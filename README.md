@@ -1,126 +1,121 @@
-Got it ✅
+# 🗄 PyBackupSync - Premium Edition
 
-Here’s what I’ll do for you now:
-
-1. **Generate a `README.md`** for your project so it looks polished, professional, and beginner-friendly.
-2. Confirm that all packages used are **100% free & open-source** (safe to use for personal or commercial projects).
-3. Design a **super cool UI** concept for your PyBackupSync app (with suggestions for Python frameworks).
+A powerful, premium-looking **desktop application** built with **CustomTkinter** for **backup, restore, encryption, and decryption** of files and folders — all with a sleek, modern UI and progress feedback.
 
 ---
 
-## **README.md**
+## Features
 
-````markdown
-# 🔐 PyBackupSync – Secure File Backup & Restore
-
-PyBackupSync is a simple yet powerful Python-based tool to **backup and restore files** from any directory.  
-It’s designed for reliability, portability, and ease of use – perfect for personal archives or small-scale deployments.
-
----
-
-## ✨ Features
-- 📂 **Backup any folder** with a single command  
-- ⏳ **Restore from backups** quickly and safely  
-- 🛡 **Data integrity checks** to ensure files are not corrupted  
-- 🖥 **Cross-platform** (Windows, macOS, Linux)  
-- ⚡ **Fast & lightweight** – no unnecessary dependencies  
+- **Backup** entire folders with incremental file copying and progress bar
+- **Restore** backups to any destination folder safely
+- **Encrypt** and **Decrypt** files using secure symmetric encryption (Fernet)
+- Multi-threaded operations to keep UI responsive
+- Detailed **progress bar** and **log console** for real-time status updates
+- Premium, dark-themed UI using CustomTkinter
+- Prevents accidental overwriting/restoration in the backup directory
+- Supports large folder backups with hashing to avoid redundant copies
 
 ---
 
-## 🛠 Installation
+## Screenshots
 
-**1. Clone the repository**
+*(Add screenshots here to show the UI, progress bar, and logs)*
+
+---
+
+## Installation
+
+### Prerequisites
+
+- Python 3.8+
+- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) (for modern themed UI)
+- [cryptography](https://cryptography.io/en/latest/) (for encryption/decryption)
+
+### Install dependencies
+
 ```bash
-git clone https://github.com/your-username/PyBackupSync.git
-cd PyBackupSync
+pip install customtkinter cryptography
 ````
 
-**2. Install dependencies**
+---
+
+## Usage
+
+### Run the application
 
 ```bash
-pip install -r requirements.txt
+python ui.py
+```
+
+### Workflow
+
+1. **Select Source Folder/File:** Use "Browse" buttons to select source files/folders
+2. **Select Destination Folder:** For restoring backups or saving encrypted files
+3. **Choose action:** Click Backup, Restore, Encrypt, or Decrypt buttons
+4. **Monitor progress:** Progress bar and log console show real-time updates
+
+---
+
+## Project Structure
+
+```
+PyBackupSync/
+│
+├── ui.py                # Main CustomTkinter GUI app
+├── main.py              # Core logic: key generation, encrypt/decrypt helpers
+├── backup.py            # Backup logic with incremental backup & progress callback
+├── restore.py           # Restore logic to copy backup to destination
+├── backups/             # Backup folders created here (do not commit this!)
+├── secret.key           # Encryption key file (auto-generated)
+├── README.md            # This file
+├── backup.log           # Log file for operations
+└── last_backup.json     # Hashes of last backup for incremental backup
 ```
 
 ---
 
-## 🚀 Usage
+## Development Notes
 
-**Backup a folder**
-
-```bash
-python main.py backup "C:\path\to\source"
-```
-
-**Restore from a backup**
-
-```bash
-python main.py restore "C:\path\to\backup"
-```
+* Backups are incremental and use file hashes to avoid re-copying unchanged files.
+* Progress is reported via a callback function updating the GUI progress bar and log.
+* Encryption uses Fernet symmetric key encryption with a persistent key stored in `secret.key`.
+* Restoring prevents overwriting inside the backups folder to avoid data corruption.
+* The app uses threads for running long tasks without freezing the UI.
+* Make sure to **never commit your `backups/` folder or `secret.key`** to version control.
 
 ---
 
-## 📦 Requirements
+## Troubleshooting
 
-The following Python packages are used (all **free & open-source**):
-
-* **os** *(built-in)*
-* **shutil** *(built-in)*
-* **argparse** *(built-in)*
-* **datetime** *(built-in)*
-* **colorama** *(MIT License)* – for colored terminal output
-* **tqdm** *(MIT License)* – for progress bars
-
-Install them with:
-
-```bash
-pip install colorama tqdm
-```
+* **Git warnings about CRLF:** These are normal on Windows and related to line endings. No action needed.
+* **Nested Git repositories:** Avoid initializing Git repos inside your `backups/` folder or other project subfolders.
+* **Backup or restore errors:** Check folder paths and permissions. Logs will be saved in `backup.log`.
+* **Encryption errors:** Ensure files exist and have correct permissions.
 
 ---
 
-## 🎨 Future Plans – Super Cool UI
+## Contribution
 
-We plan to add a **graphical interface** for PyBackupSync so you can use it without the terminal.
-Options we’re exploring:
-
-* **Tkinter** *(built-in with Python)* – lightweight desktop UI
-* **PyQt5 / PySide6** *(free for open-source)* – modern & sleek UI
-* **Custom dark mode theme** with progress indicators and status logs
-
-Example UI Concept:
-
-* **Tabs** for `Backup` and `Restore`
-* **File picker** for source & destination
-* **Live progress bar** during file operations
-* **Success & error notifications**
+Feel free to open issues or submit pull requests to improve the application!
 
 ---
 
-## 📜 License
+## License
 
-This project is licensed under the **MIT License** – free to use, modify, and distribute.
-
----
-
-## 🤝 Contributing
-
-Pull requests are welcome!
-For major changes, please open an issue first to discuss your ideas.
+This project is licensed under the MIT License.
 
 ---
 
-## 📧 Contact
+## Contact
 
-Created with ❤️ by **Your Name**
-[GitHub](https://github.com/your-username) | [Email](mailto:you@example.com)
+Created by \[Your Name] — [your.email@example.com](mailto:your.email@example.com)
+
+---
+
+*Thank you for using PyBackupSync!*
 
 ```
 
 ---
 
-✅ **All packages are free** – no commercial restrictions.  
-🎨 I can also **start building the UI now** in **Tkinter** or **PyQt5** with a modern theme so PyBackupSync looks professional.  
-
-Do you want me to **go ahead and make the UI**?  
-I can make it in Tkinter (no extra install needed) or PyQt5 (modern look).  
-```
+If you want, I can help you customize this further or add badges, screenshots, or installation instructions specific to your environment. Would you like that?
