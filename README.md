@@ -28,8 +28,8 @@ A powerful, premium-looking **desktop application** built with **CustomTkinter**
 ### Prerequisites
 
 - Python 3.8+
-- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) (for modern themed UI)
-- [cryptography](https://cryptography.io/en/latest/) (for encryption/decryption)
+- CustomTkinter (for modern themed UI)
+- cryptography (for encryption/decryption)
 
 ### Install dependencies
 
@@ -94,21 +94,10 @@ PyBackupSync/
 
 ---
 
-## Contribution
-
-Feel free to open issues or submit pull requests to improve the application!
-
----
-
-## License
-
-This project is licensed under the MIT License.
-
----
 
 ## Contact
 
-Created by \[Your Name] — [your.email@example.com](mailto:your.email@example.com)
+Created by Sagnik Bhattacharya — [bhattacharyas661@gmail.com](mailto:bhattacharyas661@gmail.com)
 
 ---
 
