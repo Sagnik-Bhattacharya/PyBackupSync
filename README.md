@@ -101,5 +101,3 @@ Created by Sagnik Bhattacharya
 ---
 
 *Thank you for using PyBackupSync!*
-
-```
