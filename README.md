@@ -97,14 +97,9 @@ PyBackupSync/
 
 ## Contact
 
-Created by Sagnik Bhattacharya — [bhattacharyas661@gmail.com](mailto:bhattacharyas661@gmail.com)
-
+Created by Sagnik Bhattacharya
 ---
 
 *Thank you for using PyBackupSync!*
 
 ```
-
----
-
-If you want, I can help you customize this further or add badges, screenshots, or installation instructions specific to your environment. Would you like that?
